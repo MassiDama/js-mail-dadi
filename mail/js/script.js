@@ -17,7 +17,7 @@ sendButton.addEventListener("click",
 
     function() {
         
-        let esitoEmail = "L'esito dell'email è negativo";
+        let esitoEmail = "La tua Email non è tra i registrati, ci dispiace!";
 
         for (let i = 0; i < listEmail.length; i++) {
 
@@ -27,12 +27,13 @@ sendButton.addEventListener("click",
 
             if (nuovaEmail === emailItem) {
                
-                esitoEmail = "L'esito della mail è positivo";
+                esitoEmail = "La tua mail è registrata. Sei pronto a passare una serata che non dimenticherai facilmente?!";
             
             }
 
         }
-
+        
+        document.querySelector(".esito-controllo").innerHTML = esitoEmail
         console.log(esitoEmail);
     }
 );
