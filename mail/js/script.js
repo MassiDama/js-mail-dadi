@@ -13,11 +13,12 @@ const sendButton = document.getElementById("genera-dati");
 
 let nuovaEmail;
 
-
 sendButton.addEventListener("click",
 
     function() {
         
+        let esitoEmail = "L'esito dell'email è negativo";
+
         for (let i = 0; i < listEmail.length; i++) {
 
             nuovaEmail = emailUser.value;
@@ -26,18 +27,15 @@ sendButton.addEventListener("click",
 
             if (nuovaEmail === emailItem) {
                
-                console.log("ciao");
-
-            } else {
-
-                console.log("no");
+                esitoEmail = "L'esito della mail è positivo";
+            
             }
 
-        
-
         }
+
+        console.log(esitoEmail);
     }
-)
+);
 
 
 
